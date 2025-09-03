@@ -32,7 +32,7 @@ const DisplayAnImage = () => (
         }}
       />
       <Image
-        style={{ width: 300, height: 150, backgroundColor: 'brown' }}
+        style={{ width: 300, height: 150, backgroundColor: 'red' }}
         source={{
           uri:
             'data:image/png;base64,' +
