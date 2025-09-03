@@ -6,6 +6,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingBottom: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'pink',
   },
   tinyLogo: {
     width: 50,
@@ -23,12 +26,13 @@ const DisplayAnImage = () => (
       <Image source={require('./assets/local.jpg')} />
       <Image
         // style={styles.tinyLogo}
+        style={{ width: 300, height: 150 }}
         source={{
-          uri: 'https://tse3.mm.bing.net/th/id/OIP.KLutQzmurWnk0bFujxyQkgHaFg?pid=Api&P=0&h=180',
+          uri: 'https://img.freepik.com/foto-gratis/bunga-sakura-yang-indah_181624-668.jpg?semt=ais_hybrid&w=740&q=80',
         }}
       />
       <Image
-        style={styles.logo}
+        style={{ width: 300, height: 150, backgroundColor: 'brown' }}
         source={{
           uri:
             'data:image/png;base64,' +
