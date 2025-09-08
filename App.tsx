@@ -13,7 +13,7 @@ export default App;
 
 const styles = StyleSheet.create({
   title: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'pink',
     color: 'red',
     fontSize: 30,
     textAlign: 'center',
