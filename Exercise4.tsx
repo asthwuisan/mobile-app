@@ -47,6 +47,7 @@ const Exercise3: React.FC = () => {
           />
         </View>
 
+
         {/* Sign In Button */}
         <TouchableOpacity style={styles.button} onPress={handleLogin}>
           <Text style={styles.buttonText}>Sign In</Text>
