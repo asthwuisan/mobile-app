@@ -1,23 +1,35 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import TextInput from './components/TextInput';
+import React, { useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Button from './components/Button';
+import TextInput from './components/TextInput';
 
 const Exercise5 = () => {
+  // let title = 'Welcome !!!'; //Deklarasi variabel biasa
+  const [title, setTitle] = useState('Welcome'); //Varible state
+  const [username, setUsername] = useState('');
+  const onSignIn = () => {
+    // title = 'Selamat Datang';
+    setTitle(`Selamat Datang ${username}`);
+    console.log(title);
+  };
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome</Text>
-      <TextInput placeholder="Masukan username anda" label="Username" />
+      <Text style={styles.title}>{title}</Text>
+      <TextInput
+        placeholder="Masukan username anda"
+        label="Username"
+        onChangeText={event => setUsername(event)}
+      />
       <TextInput
         placeholder="Masukan password anda"
         label="Password"
         secureTextEntry={true}
       />
-      <Button label="Sign In" />
+      <Button label="Sign In" onPress={onSignIn} />
+      <Button label="Sign In Google" color="red" colorText="#ffffff" />
+      <Button label="Sign In Facebook" color="blue" colorText="#ffffff" />
+      <Button label="Sign In Apple" color="black" colorText="#ffffff" />
       <Button label="Create New Account" color="#797171" colorText="#ffffff" />
-      <Button label="Sign in with Google" color="#DB4437" colorText="#fff" />
-      <Button label="Sign in with Facebook" color="#1877F2" colorText="#fff" />
-      <Button label="Sign in with Apple" color="#000000" colorText="#fff" />
     </View>
   );
 };
@@ -31,7 +43,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   title: {
-    fontSize: 35,
+    fontSize: 28,
     fontWeight: 'bold',
     color: 'black',
     marginBottom: 40,

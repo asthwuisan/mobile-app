@@ -1,8 +1,8 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-const Title = () => {
-  return <Text style={styles.title}>Welcome</Text>;
+const Title = ({ text = 'Registration' }) => {
+  return <Text style={styles.title}>{text}</Text>;
 };
 
 export default Title;
